@@ -17,6 +17,7 @@ import java.util.stream.Collectors;
 
 import org.apache.ibatis.type.BaseTypeHandler;
 import org.apache.ibatis.type.JdbcType;
+import org.apache.ibatis.type.MappedTypes;
 
 import ltd.qubit.commons.util.range.LocalTimeRange;
 import ltd.qubit.commons.util.range.LocalTimeRangeList;
@@ -26,9 +27,8 @@ import ltd.qubit.commons.util.range.LocalTimeRangeList;
  *
  * @author pino
  */
-
-public class LocalTimeRangeListHandler extends
-    BaseTypeHandler<LocalTimeRangeList> {
+@MappedTypes(LocalTimeRange.class)
+public class LocalTimeRangeListHandler extends BaseTypeHandler<LocalTimeRangeList> {
 
   @Override
   public void setNonNullParameter(final PreparedStatement preparedStatement,

@@ -8,17 +8,12 @@
 ////////////////////////////////////////////////////////////////////////////////
 package ltd.qubit.commons.mybatis;
 
-import java.sql.CallableStatement;
 import java.sql.Date;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.time.LocalDate;
-import java.time.LocalTime;
 
-import org.apache.ibatis.type.BaseTypeHandler;
-import org.apache.ibatis.type.JdbcType;
 import org.apache.ibatis.type.MappedTypes;
+
+import ltd.qubit.commons.util.codec.LocalDateCodec;
 
 /**
  * The MyBatis type handler for the {@link LocalDate} class.
@@ -32,47 +27,9 @@ import org.apache.ibatis.type.MappedTypes;
  * @author Haixing Hu
  */
 @MappedTypes(LocalDate.class)
-public class LocalDateHandler extends BaseTypeHandler<LocalDate> {
+public class LocalDateHandler extends ObjectCodecHandler<LocalDate> {
 
-  private static final LocalTime ZERO = LocalTime.of(0, 0);
-
-  @Override
-  public void setNonNullParameter(final PreparedStatement ps, final int i,
-      final LocalDate parameter, final JdbcType jdbcType) throws SQLException {
-    if (parameter == null) {
-      ps.setString(i, null);
-    } else {
-      final String date = parameter.toString();
-      ps.setString(i, date);
-    }
-  }
-
-  @Override
-  public LocalDate getNullableResult(final ResultSet rs, final String columnName)
-      throws SQLException {
-    final String date = rs.getString(columnName);
-    return stringToLocalDate(date);
-  }
-
-  @Override
-  public LocalDate getNullableResult(final ResultSet rs, final int columnIndex)
-      throws SQLException {
-    final String date = rs.getString(columnIndex);
-    return stringToLocalDate(date);
-  }
-
-  @Override
-  public LocalDate getNullableResult(final CallableStatement cs, final int columnIndex)
-      throws SQLException {
-    final String date = cs.getString(columnIndex);
-    return stringToLocalDate(date);
-  }
-
-  private LocalDate stringToLocalDate(final String date) {
-    if (date == null) {
-      return null;
-    } else {
-      return LocalDate.parse(date);
-    }
+  public LocalDateHandler() {
+    super(LocalDate.class, new LocalDateCodec());
   }
 }

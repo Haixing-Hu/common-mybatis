@@ -8,15 +8,19 @@
 ////////////////////////////////////////////////////////////////////////////////
 package ltd.qubit.commons.mybatis;
 
+import java.time.LocalDateTime;
+
+import ltd.qubit.commons.util.codec.IsoLocalDateTimeCodec;
+
 /**
  * Handle the local date time without a timezone. The format of the local data
  * time satisfies the ISO-8601 standard "yyyy-MM-dd HH:mm:ss".
  *
  * @author Haixing Hu
  */
-public class IsoLocalDateTimeHandler extends LocalDateTimePatternHandler {
+public class IsoLocalDateTimeHandler extends ObjectCodecHandler<LocalDateTime> {
 
   public IsoLocalDateTimeHandler() {
-    super("yyyy-MM-dd[[' ']['T']HH:mm[':'ss[.SSS]]]");
+    super(LocalDateTime.class, new IsoLocalDateTimeCodec());
   }
 }

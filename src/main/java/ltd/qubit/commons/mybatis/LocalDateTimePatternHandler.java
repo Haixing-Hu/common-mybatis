@@ -30,7 +30,6 @@ import ltd.qubit.commons.util.codec.LocalDateTimeCodec;
 public class LocalDateTimePatternHandler extends BaseTypeHandler<LocalDateTime> {
 
   private static final Logger LOGGER = LoggerFactory.getLogger(LocalDateTimePatternHandler.class);
-  private static final String DEFAULT_PATTERN = LocalDateTimeCodec.DEFAULT_DECODE_PATTERN;
 
   private final LocalDateTimeCodec codec;
 
@@ -43,11 +42,11 @@ public class LocalDateTimePatternHandler extends BaseTypeHandler<LocalDateTime> 
   }
 
   public final String getPattern() {
-    return codec.getDecodePattern();
+    return codec.getEncodePattern();
   }
 
   public final LocalDateTimePatternHandler setPattern(final String pattern) {
-    codec.setDecodePattern(pattern);
+    codec.setDecodePatterns(new String[]{ pattern });
     codec.setEncodePattern(pattern);
     return this;
   }
