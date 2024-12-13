@@ -37,11 +37,9 @@ import ltd.qubit.commons.util.codec.EncodingException;
 public class ObjectCodecHandler<T> extends BaseTypeHandler<T> {
 
   private final Logger logger = LoggerFactory.getLogger(this.getClass());
-  private final Class<T> type;
   private final Codec<T, String> codec;
 
-  protected ObjectCodecHandler(final Class<T> type, final Codec<T, String> codec) {
-    this.type = type;
+  protected ObjectCodecHandler(final Codec<T, String> codec) {
     this.codec = codec;
   }
 

@@ -26,6 +26,6 @@ import ltd.qubit.commons.util.codec.LocalTimeCodec;
 public class LocalTimeHandler extends ObjectCodecHandler<LocalTime> {
 
   public LocalTimeHandler() {
-    super(LocalTime.class, new LocalTimeCodec());
+    super(new LocalTimeCodec());
   }
 }

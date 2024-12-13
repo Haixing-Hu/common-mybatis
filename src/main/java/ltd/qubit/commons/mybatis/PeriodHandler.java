@@ -25,6 +25,6 @@ import ltd.qubit.commons.util.codec.PeriodCodec;
 public class PeriodHandler extends ObjectCodecHandler<Period> {
 
   public PeriodHandler() {
-    super(Period.class, new PeriodCodec());
+    super(new PeriodCodec());
   }
 }

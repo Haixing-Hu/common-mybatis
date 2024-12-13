@@ -24,7 +24,7 @@ import ltd.qubit.commons.util.codec.StringListCodec;
 public class StringListHandler extends ObjectCodecHandler<StringList> {
 
   public StringListHandler() {
-    super(StringList.class, new StringListCodec());
+    super(new StringListCodec());
   }
 
 }

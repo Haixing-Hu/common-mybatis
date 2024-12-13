@@ -21,6 +21,6 @@ import ltd.qubit.commons.util.codec.IsoLocalDateTimeCodec;
 public class IsoLocalDateTimeHandler extends ObjectCodecHandler<LocalDateTime> {
 
   public IsoLocalDateTimeHandler() {
-    super(LocalDateTime.class, new IsoLocalDateTimeCodec());
+    super(new IsoLocalDateTimeCodec());
   }
 }

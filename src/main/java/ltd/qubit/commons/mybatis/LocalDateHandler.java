@@ -30,6 +30,6 @@ import ltd.qubit.commons.util.codec.LocalDateCodec;
 public class LocalDateHandler extends ObjectCodecHandler<LocalDate> {
 
   public LocalDateHandler() {
-    super(LocalDate.class, new LocalDateCodec());
+    super(new LocalDateCodec());
   }
 }

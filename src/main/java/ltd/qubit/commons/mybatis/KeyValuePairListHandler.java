@@ -24,6 +24,6 @@ import ltd.qubit.commons.util.pair.KeyValuePairList;
 public class KeyValuePairListHandler extends ObjectCodecHandler<KeyValuePairList> {
 
   public KeyValuePairListHandler() {
-    super(KeyValuePairList.class, new KeyValuePairListCodec());
+    super(new KeyValuePairListCodec());
   }
 }

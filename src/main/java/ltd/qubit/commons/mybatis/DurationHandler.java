@@ -25,6 +25,6 @@ import ltd.qubit.commons.util.codec.DurationCodec;
 public class DurationHandler extends ObjectCodecHandler<Duration> {
 
   public DurationHandler() {
-    super(Duration.class, new DurationCodec());
+    super(new DurationCodec());
   }
 }

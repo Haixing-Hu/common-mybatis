@@ -24,6 +24,6 @@ import ltd.qubit.commons.util.codec.StringArrayCodec;
 public class StringArrayHandler extends ObjectCodecHandler<String[]> {
 
   public StringArrayHandler() {
-    super(String[].class, new StringArrayCodec());
+    super(new StringArrayCodec());
   }
 }
