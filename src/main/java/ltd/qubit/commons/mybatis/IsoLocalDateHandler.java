@@ -13,13 +13,15 @@ import java.time.LocalDate;
 import ltd.qubit.commons.util.codec.IsoLocalDateCodec;
 
 /**
- * Handle the local date without a timezone. The format of the local data satisfies
- * the ISO-8601 standard "yyyy-MM-dd".
+ * 处理不带时区的本地日期。本地日期的格式符合 ISO-8601 标准 "yyyy-MM-dd"。
  *
- * @author Haixing Hu
+ * @author 胡海星
  */
 public class IsoLocalDateHandler extends ObjectCodecHandler<LocalDate> {
 
+  /**
+   * 构造一个 {@code IsoLocalDateHandler} 对象。
+   */
   public IsoLocalDateHandler() {
     super(new IsoLocalDateCodec());
   }

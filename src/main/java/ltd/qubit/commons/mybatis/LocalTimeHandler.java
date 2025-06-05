@@ -8,7 +8,6 @@
 ////////////////////////////////////////////////////////////////////////////////
 package ltd.qubit.commons.mybatis;
 
-import java.sql.Time;
 import java.time.LocalTime;
 
 import org.apache.ibatis.type.MappedTypes;
@@ -16,15 +15,18 @@ import org.apache.ibatis.type.MappedTypes;
 import ltd.qubit.commons.util.codec.LocalTimeCodec;
 
 /**
- * The MyBatis type handler for the {@link LocalTime} class.
+ * {@link LocalTime} 类型的 MyBatis 类型处理器。
  *
- * <p>It maps Java 8 {@link LocalTime} &lt;-&gt; {@link Time}
+ * <p>该处理器将 Java 8 的 {@link LocalTime} 类型与 {@link java.sql.Time} 类型进行相互映射。
  *
- * @author Haixing Hu
+ * @author 胡海星
  */
 @MappedTypes(LocalTime.class)
 public class LocalTimeHandler extends ObjectCodecHandler<LocalTime> {
 
+  /**
+   * 构造一个 {@code LocalTimeHandler} 对象。
+   */
   public LocalTimeHandler() {
     super(new LocalTimeCodec());
   }

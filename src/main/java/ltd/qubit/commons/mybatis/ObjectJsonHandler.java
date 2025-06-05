@@ -33,7 +33,7 @@ import ltd.qubit.commons.text.jackson.CustomizedJsonMapper;
  * This class is intended to be used as a base class for implementing the type
  * handlers of specific classes.
  *
- * @author Haixing Hu
+ * @author 胡海星
  */
 public class ObjectJsonHandler<T> extends BaseTypeHandler<T> {
 

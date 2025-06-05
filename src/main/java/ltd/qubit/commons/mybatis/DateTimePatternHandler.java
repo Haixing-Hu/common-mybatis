@@ -33,7 +33,7 @@ import static ltd.qubit.commons.lang.DateUtils.getDateTime;
 /**
  * Handle the local date time without a timezone.
  *
- * @author Haixing Hu
+ * @author 胡海星
  */
 public class DateTimePatternHandler extends BaseTypeHandler<Date> {
 

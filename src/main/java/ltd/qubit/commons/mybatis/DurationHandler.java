@@ -15,15 +15,18 @@ import org.apache.ibatis.type.MappedTypes;
 import ltd.qubit.commons.util.codec.DurationCodec;
 
 /**
- * The MyBatis type handler for the {@link Duration} class.
+ * {@link Duration} 类型的 MyBatis 类型处理器。
  *
- * <p>It maps Java 8 {@link Duration} &lt;-&gt; {@link String}.
+ * <p>该处理器将 Java 8 的 {@link Duration} 类型与 {@link String} 类型进行相互映射。
  *
- * @author Haixing Hu
+ * @author 胡海星
  */
 @MappedTypes(Duration.class)
 public class DurationHandler extends ObjectCodecHandler<Duration> {
 
+  /**
+   * 构造一个 {@code DurationHandler} 对象。
+   */
   public DurationHandler() {
     super(new DurationCodec());
   }

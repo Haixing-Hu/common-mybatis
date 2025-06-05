@@ -14,11 +14,11 @@ import ltd.qubit.commons.datastructure.list.StringList;
 import ltd.qubit.commons.util.codec.StringListCodec;
 
 /**
- * The MyBatis type handler for the {@link StringList} class.
+ * {@link StringList} 类型的 MyBatis 类型处理器。
  *
- * <p>It maps {@link StringList} &lt;-&gt; {@link String}
+ * <p>该处理器将 {@link StringList} 类型与 {@link String} 类型进行相互映射。
  *
- * @author Haixing Hu
+ * @author 胡海星
  */
 @MappedTypes(StringList.class)
 public class StringListHandler extends ObjectCodecHandler<StringList> {

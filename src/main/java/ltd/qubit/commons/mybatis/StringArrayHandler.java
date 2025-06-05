@@ -13,12 +13,12 @@ import org.apache.ibatis.type.MappedTypes;
 import ltd.qubit.commons.util.codec.StringArrayCodec;
 
 /**
- * The MyBatis type handler for the {@code String[]} class.
+ * {@code String[]} 类型的 MyBatis 类型处理器。
  *
- * <p>It maps {@code String[]} &lt;-&gt; {@code String}, using comma to separate
- * elements in the string array.
+ * <p>该处理器将 {@code String[]} 类型与 {@code String} 类型进行相互映射，
+ * 在字符串中使用逗号分隔数组元素。
  *
- * @author Haixing Hu
+ * @author 胡海星
  */
 @MappedTypes(String[].class)
 public class StringArrayHandler extends ObjectCodecHandler<String[]> {

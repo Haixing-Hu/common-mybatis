@@ -14,15 +14,18 @@ import ltd.qubit.commons.util.codec.KeyValuePairListCodec;
 import ltd.qubit.commons.util.pair.KeyValuePairList;
 
 /**
- * The MyBatis type handler for the {@link KeyValuePairList} class.
+ * {@link KeyValuePairList} 类型的 MyBatis 类型处理器。
  *
- * <p>It maps {@link KeyValuePairList} &lt;-&gt; {@link String}
+ * <p>该处理器将 {@link KeyValuePairList} 类型与 {@link String} 类型进行相互映射。
  *
- * @author Haixing Hu
+ * @author 胡海星
  */
 @MappedTypes(KeyValuePairList.class)
 public class KeyValuePairListHandler extends ObjectCodecHandler<KeyValuePairList> {
 
+  /**
+   * 构造一个 {@code KeyValuePairListHandler} 对象。
+   */
   public KeyValuePairListHandler() {
     super(new KeyValuePairListCodec());
   }

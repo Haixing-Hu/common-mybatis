@@ -8,7 +8,6 @@
 ////////////////////////////////////////////////////////////////////////////////
 package ltd.qubit.commons.mybatis;
 
-import java.sql.Timestamp;
 import java.time.LocalDateTime;
 
 import org.apache.ibatis.type.MappedTypes;
@@ -16,19 +15,21 @@ import org.apache.ibatis.type.MappedTypes;
 import ltd.qubit.commons.util.codec.LocalDateTimeCodec;
 
 /**
- * The MyBatis type handler for the {@link LocalDateTime} class.
+ * {@link LocalDateTime} 类型的 MyBatis 类型处理器。
  *
- * <p>It maps Java 8 {@link LocalDateTime} &lt;-&gt; {@link Timestamp}.
+ * <p>该处理器将 Java 8 的 {@link LocalDateTime} 类型与 {@link java.sql.Timestamp} 类型进行相互映射。
  *
- * <p><b>NOTE:</b> In order to avoid the timezone problem, we convert the
- * {@link LocalDateTime} to {@link String} to store it to the database,
- * and vice verse.</p>
+ * <p><b>注意：</b> 为了避免时区问题，我们在存入数据库时将 {@link LocalDateTime} 转换为
+ * {@link String}，反之亦然。</p>
  *
- * @author Haixing Hu
+ * @author 胡海星
  */
 @MappedTypes(LocalDateTime.class)
 public class LocalDateTimeHandler extends ObjectCodecHandler<LocalDateTime> {
 
+  /**
+   * 构造一个 {@code LocalDateTimeHandler} 对象。
+   */
   public LocalDateTimeHandler() {
     super(new LocalDateTimeCodec());
   }

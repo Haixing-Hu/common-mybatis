@@ -25,7 +25,7 @@ import ltd.qubit.commons.util.codec.LocalDateTimeCodec;
 /**
  * Handle the local date time without a timezone.
  *
- * @author Haixing Hu
+ * @author 胡海星
  */
 public class LocalDateTimePatternHandler extends BaseTypeHandler<LocalDateTime> {
 

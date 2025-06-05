@@ -29,7 +29,7 @@ import org.apache.ibatis.type.MappedTypes;
  * <p>It maps Java 8 {@link Instant} &lt;-&gt; {@link Timestamp}
  * with timezone.
  *
- * @author Haixing Hu
+ * @author 胡海星
  */
 @MappedTypes(OffsetDateTime.class)
 public class OffsetDateTimeHandler extends BaseTypeHandler<OffsetDateTime> {

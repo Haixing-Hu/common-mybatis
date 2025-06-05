@@ -26,7 +26,7 @@ import ltd.qubit.commons.lang.DateUtils;
 /**
  * The MyBatis type handler for UTC timestamps.
  *
- * @author Haixing Hu
+ * @author 胡海星
  */
 @MappedTypes(Date.class)
 public class UtcDateHandler extends BaseTypeHandler<Date> {
